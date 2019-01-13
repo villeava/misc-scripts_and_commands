@@ -1,0 +1,10 @@
+root@debiantemplate:~# cat originalfile.txt
+1417401003000,9.1
+1417401003001,8.1
+1417401003002,7.1
+root@debiantemplate:~# cat originalfile.txt |awk -F"," '{print "ulkona value="$2" "$1}' > newfile.txt
+root@debiantemplate:~#
+root@debiantemplate:~# cat newfile.txt
+ulkona value=9.1 1417401003000
+ulkona value=8.1 1417401003001
+ulkona value=7.1 1417401003002
